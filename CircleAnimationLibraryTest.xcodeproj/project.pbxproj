@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A38CD684D31E2B3307430E6 /* Pods_CircleAnimationLibraryTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED5BE7CBACC58F99D9C3BBB /* Pods_CircleAnimationLibraryTest.framework */; };
 		95E202732485E7DA0043A7BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E202722485E7DA0043A7BB /* AppDelegate.swift */; };
 		95E202752485E7DA0043A7BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E202742485E7DA0043A7BB /* SceneDelegate.swift */; };
 		95E202772485E7DA0043A7BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E202762485E7DA0043A7BB /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3ACB3A80C51637FF99E156DD /* Pods-CircleAnimationLibraryTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleAnimationLibraryTest.release.xcconfig"; path = "Target Support Files/Pods-CircleAnimationLibraryTest/Pods-CircleAnimationLibraryTest.release.xcconfig"; sourceTree = "<group>"; };
+		3CA9AB0B9A7519594E04A5BC /* Pods-CircleAnimationLibraryTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleAnimationLibraryTest.debug.xcconfig"; path = "Target Support Files/Pods-CircleAnimationLibraryTest/Pods-CircleAnimationLibraryTest.debug.xcconfig"; sourceTree = "<group>"; };
+		3ED5BE7CBACC58F99D9C3BBB /* Pods_CircleAnimationLibraryTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircleAnimationLibraryTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E2026F2485E7DA0043A7BB /* CircleAnimationLibraryTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleAnimationLibraryTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E202722485E7DA0043A7BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95E202742485E7DA0043A7BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A38CD684D31E2B3307430E6 /* Pods_CircleAnimationLibraryTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14CC7CD27B5E6682E48731BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3ED5BE7CBACC58F99D9C3BBB /* Pods_CircleAnimationLibraryTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DFA4F339DAEEE109904EB72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CA9AB0B9A7519594E04A5BC /* Pods-CircleAnimationLibraryTest.debug.xcconfig */,
+				3ACB3A80C51637FF99E156DD /* Pods-CircleAnimationLibraryTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		95E202662485E7DA0043A7BB = {
 			isa = PBXGroup;
 			children = (
 				95E202712485E7DA0043A7BB /* CircleAnimationLibraryTest */,
 				95E202702485E7DA0043A7BB /* Products */,
+				7DFA4F339DAEEE109904EB72 /* Pods */,
+				14CC7CD27B5E6682E48731BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95E202832485E7DD0043A7BB /* Build configuration list for PBXNativeTarget "CircleAnimationLibraryTest" */;
 			buildPhases = (
+				2038466F7F78474ED7B90257 /* [CP] Check Pods Manifest.lock */,
 				95E2026B2485E7DA0043A7BB /* Sources */,
 				95E2026C2485E7DA0043A7BB /* Frameworks */,
 				95E2026D2485E7DA0043A7BB /* Resources */,
+				D382A7FAA2275EC1BD579D50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2038466F7F78474ED7B90257 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CircleAnimationLibraryTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D382A7FAA2275EC1BD579D50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CircleAnimationLibraryTest/Pods-CircleAnimationLibraryTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CircleAnimationLibraryTest/Pods-CircleAnimationLibraryTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CircleAnimationLibraryTest/Pods-CircleAnimationLibraryTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		95E2026B2485E7DA0043A7BB /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		95E202842485E7DD0043A7BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CA9AB0B9A7519594E04A5BC /* Pods-CircleAnimationLibraryTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		95E202852485E7DD0043A7BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ACB3A80C51637FF99E156DD /* Pods-CircleAnimationLibraryTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
